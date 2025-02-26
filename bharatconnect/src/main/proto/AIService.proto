@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.bharatconnect.grpc;
+
+service AIService {
+    rpc analyzeProduct(AIRequest) returns (AIResponse);
+}
+
+message AIRequest {
+    string productName = 1;
+}
+
+message AIResponse {
+    string analysis = 1;
+}
